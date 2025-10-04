@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blue Ridge Square - Professional Property Management</title>
+    <title>Blue Ridge Square - Quality Rentals in Virginia</title>
     <style>
         * {
             margin: 0;
@@ -14,302 +14,324 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            color: #2d3748;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
+        /* Header */
         header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 100;
         }
 
         nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.25rem 1.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
         }
 
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.75rem;
             font-weight: 700;
-            color: #4a5568;
-            text-decoration: none;
+            color: #2d3748;
         }
 
         .logo span {
             color: #667eea;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-link {
-            color: #4a5568;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: #667eea;
-        }
-
         .portal-btn {
-            background: linear-gradient(45deg, #0ea5e9, #06b6d4);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 20px;
+            padding: 0.65rem 1.5rem;
+            border-radius: 25px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             transition: all 0.3s ease;
-            box-shadow: 0 3px 12px rgba(14, 165, 233, 0.3);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
         }
 
         .portal-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
         }
 
+        /* Hero Section */
         .hero {
-            text-align: center;
-            padding: 100px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
+            padding: 5rem 1.5rem 4rem;
+            text-align: center;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             margin-bottom: 1rem;
             font-weight: 700;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-            animation: fadeInUp 1s ease;
         }
 
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            opacity: 0.9;
+            font-size: 1.25rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-            animation: fadeInUp 1s ease 0.2s both;
         }
 
-        .hero .platform-note {
-            font-size: 1rem;
-            margin-bottom: 2rem;
-            opacity: 0.8;
-            font-style: italic;
-            animation: fadeInUp 1s ease 0.3s both;
-        }
-
-        .cta-buttons {
+        .trust-bar {
             display: flex;
-            gap: 1rem;
             justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 1s ease 0.4s both;
+            gap: 2.5rem;
+            margin-top: 2.5rem;
+            font-size: 0.95rem;
+            opacity: 0.9;
         }
 
-        .btn {
-            padding: 15px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Properties Section */
+        .properties {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.25rem;
+            color: #2d3748;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-header p {
+            color: #718096;
             font-size: 1.1rem;
         }
 
-        .btn-primary {
-            background: linear-gradient(45deg, #0ea5e9, #06b6d4);
-            color: white;
-            box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4);
+        .properties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
         }
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(14, 165, 233, 0.5);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
+        .property-card {
             background: white;
-            color: #0ea5e9;
-            transform: translateY(-2px);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
         }
 
-        .services {
-            background: white;
-            padding: 80px 0;
+        .property-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
         }
 
-        .services h2 {
-            text-align: center;
-            font-size: 2.5rem;
+        .property-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            color: #cbd5e0;
+        }
+
+        .property-info {
+            padding: 1.5rem;
+        }
+
+        .property-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+
+        .property-location {
+            color: #718096;
+            font-size: 0.95rem;
             margin-bottom: 1rem;
+        }
+
+        .property-specs {
+            display: flex;
+            gap: 1.25rem;
+            margin-bottom: 1.25rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 0.9rem;
             color: #4a5568;
         }
 
-        .services .subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: #718096;
-            margin-bottom: 3rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+        .spec strong {
+            color: #2d3748;
+            font-size: 1rem;
         }
 
-        .services-grid {
+        .property-rent {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 1.25rem;
+        }
+
+        .property-rent span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #718096;
+        }
+
+        .apply-btn {
+            display: block;
+            width: 100%;
+            padding: 0.875rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .apply-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.35);
+        }
+
+        .no-properties {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #718096;
+        }
+
+        .no-properties h3 {
+            font-size: 1.5rem;
+            color: #4a5568;
+            margin-bottom: 0.75rem;
+        }
+
+        /* Why Rent Section */
+        .why-rent {
+            background: #f7fafc;
+            padding: 4rem 1.5rem;
+        }
+
+        .why-rent-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .why-rent h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #2d3748;
+            margin-bottom: 2.5rem;
+        }
+
+        .benefits {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
-        .service-card {
-            background: #f8fafc;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid #e2e8f0;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .turbotenant-section {
-            background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .turbotenant-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .turbotenant-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .platform-buttons {
+        .benefit {
             display: flex;
             gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 2rem;
+            align-items: flex-start;
         }
 
-        .platform-btn {
-            background: white;
-            color: #0ea5e9;
-            padding: 15px 25px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+        .benefit-icon {
+            font-size: 1.75rem;
+            color: #667eea;
+            flex-shrink: 0;
         }
 
-        .platform-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4);
+        .benefit-text h3 {
+            font-size: 1.1rem;
+            color: #2d3748;
+            margin-bottom: 0.4rem;
         }
 
+        .benefit-text p {
+            color: #718096;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
         .contact {
-            background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+            background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
             color: white;
-            padding: 80px 0;
+            padding: 4rem 1.5rem;
             text-align: center;
         }
 
         .contact h2 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 1rem;
         }
 
         .contact p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
+            font-size: 1.1rem;
             opacity: 0.9;
+            margin-bottom: 2rem;
         }
 
         .contact-info {
             display: flex;
             justify-content: center;
-            gap: 3rem;
+            gap: 2.5rem;
             flex-wrap: wrap;
-            margin-top: 2rem;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            font-size: 1.1rem;
+            gap: 0.6rem;
+            font-size: 1.05rem;
         }
 
         .contact-item a {
             color: white;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         .contact-item a:hover {
             color: #90cdf4;
         }
 
-        .contact-note {
-            margin-top: 1.5rem;
-            font-size: 0.95rem;
-            opacity: 0.8;
-            font-style: italic;
-        }
-
+        /* Footer */
         footer {
-            background: #2d3748;
+            background: #1a202c;
             color: white;
-            text-align: center;
-            padding: 2rem 0;
+            padding: 1.75rem 1.5rem;
         }
 
         .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -322,40 +344,25 @@
             opacity: 0.7;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
+        /* Responsive */
         @media (max-width: 768px) {
-            .nav-links {
-                gap: 1rem;
-            }
-            
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.25rem;
             }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
-            .cta-buttons, .platform-buttons {
+
+            .trust-bar {
                 flex-direction: column;
-                align-items: center;
+                gap: 0.75rem;
             }
-            
-            .contact-info {
-                flex-direction: column;
-                gap: 1rem;
+
+            .properties-grid {
+                grid-template-columns: 1fr;
             }
-            
+
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+
             .footer-content {
                 flex-direction: column;
                 text-align: center;
@@ -364,133 +371,461 @@
     </style>
 </head>
 <body>
+    <!-- 
+    ========================================
+    ADMIN INSTRUCTIONS - ACTIVATING PROPERTIES
+    ========================================
+    
+    To make a property available on the website:
+    
+    1. Scroll down to the JavaScript section (around line 350)
+    2. Find the properties array
+    3. Locate your property by searching for its address
+    4. Change "available: false" to "available: true"
+    5. Add the TurboTenant pre-screener link (replace REPLACE_WITH_TURBOTENANT_LINK)
+    6. Save the file and upload to Cloudflare
+    
+    That's it! The property will instantly appear on the site.
+    
+    To DEACTIVATE: Change "available: true" back to "available: false"
+    
+    ========================================
+    -->
+
     <header>
-        <nav class="container">
-            <a href="#" class="logo">Blue Ridge <span>Square</span></a>
-            <div class="nav-links">
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <a href="https://www.turbotenant.com/" class="portal-btn" target="_blank">TurboTenant Portal</a>
-            </div>
+        <nav>
+            <div class="logo">Blue Ridge <span>Square</span></div>
+            <a href="https://renter.turbotenant.com/" class="portal-btn" target="_blank">Tenant Portal</a>
         </nav>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero">
-            <div class="container">
-                <h1>Professional Property Management</h1>
-                <p>Reliable, experienced property management services with a personal touch. We handle the details so you don't have to.</p>
-                <p class="platform-note">All rental applications, maintenance requests, and tenant communication handled through our secure online platform</p>
-                <div class="cta-buttons">
-                    <a href="https://www.turbotenant.com/" class="btn btn-primary" target="_blank">Access TurboTenant Portal</a>
-                    <a href="https://renter.turbotenant.com/" class="btn btn-secondary" target="_blank">Tenant Login</a>
+            <h1>Quality Rentals in Virginia</h1>
+            <p>Professional property management with simple, secure online applications</p>
+            <div class="trust-bar">
+                <div class="trust-item">📍 28 Properties Across Virginia</div>
+                <div class="trust-item">👨‍👩‍👧‍👦 Family-Owned & Operated</div>
+                <div class="trust-item">✓ Professional Screening</div>
+            </div>
+        </section>
+
+        <!-- Available Properties -->
+        <section class="properties">
+            <div class="section-header">
+                <h2>Available Now</h2>
+                <p>Apply online through our secure TurboTenant platform</p>
+            </div>
+            
+            <div id="propertiesGrid" class="properties-grid">
+                <!-- Properties load here -->
+            </div>
+
+            <div id="noProperties" class="no-properties" style="display: none;">
+                <h3>No Properties Currently Available</h3>
+                <p>Check back soon or contact us to be notified when properties become available</p>
+            </div>
+        </section>
+
+        <!-- Why Rent With Us -->
+        <section class="why-rent">
+            <div class="why-rent-content">
+                <h2>Why Rent With Us</h2>
+                <div class="benefits">
+                    <div class="benefit">
+                        <div class="benefit-icon">🔍</div>
+                        <div class="benefit-text">
+                            <h3>Professional Screening</h3>
+                            <p>Secure online applications with comprehensive background and credit checks through TurboTenant</p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit-icon">💳</div>
+                        <div class="benefit-text">
+                            <h3>Easy Online Payments</h3>
+                            <p>Pay rent 24/7 from any device. Submit maintenance requests instantly through your tenant portal</p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit-icon">🏘️</div>
+                        <div class="benefit-text">
+                            <h3>Local Management</h3>
+                            <p>Responsive, family-owned business serving Virginia communities for years</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="services" class="services">
-            <div class="container">
-                <h2>Professional Management Services</h2>
-                <p class="subtitle">Comprehensive property management through our integrated TurboTenant platform</p>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <span class="service-icon">🏠</span>
-                        <h3>Tenant Management</h3>
-                        <p>Complete tenant screening, placement, and ongoing relationship management through our secure online portal. Quality renters, streamlined process.</p>
-                    </div>
-                    <div class="service-card">
-                        <span class="service-icon">🔧</span>
-                        <h3>Maintenance Coordination</h3>
-                        <p>24/7 maintenance request handling through the TurboTenant platform with trusted local contractors for prompt, professional service.</p>
-                    </div>
-                    <div class="service-card">
-                        <span class="service-icon">📊</span>
-                        <h3>Financial Management</h3>
-                        <p>Automated rent collection, expense tracking, and detailed financial reporting through integrated accounting tools to maximize your investment returns.</p>
-                    </div>
+        <!-- Contact -->
+        <section class="contact">
+            <h2>Questions?</h2>
+            <p>Get in touch with us about available properties</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    📧 <a href="mailto:service@blueridgesquarellc.com">service@blueridgesquarellc.com</a>
                 </div>
-            </div>
-        </section>
-
-        <section class="turbotenant-section">
-            <div class="container">
-                <h2>Streamlined Property Management Platform</h2>
-                <p>We use TurboTenant's professional property management platform to provide you with 24/7 access to all aspects of your rental property. From applications to rent collection, everything is handled through one secure, easy-to-use system.</p>
-                
-                <div class="platform-buttons">
-                    <a href="https://www.turbotenant.com/" class="platform-btn" target="_blank">🏢 Property Owner Portal</a>
-                    <a href="https://renter.turbotenant.com/" class="platform-btn" target="_blank">🔑 Tenant Portal</a>
+                <div class="contact-item">
+                    📬 <a href="mailto:info@blueridgesquarellc.com">info@blueridgesquarellc.com</a>
                 </div>
-                
-                <p style="margin-top: 2rem; font-size: 1rem; opacity: 0.9;">
-                    ✓ Online Applications & Screening &nbsp;&nbsp;&nbsp; ✓ Digital Lease Agreements &nbsp;&nbsp;&nbsp; ✓ Automatic Rent Collection<br>
-                    ✓ Maintenance Request System &nbsp;&nbsp;&nbsp; ✓ Financial Reporting &nbsp;&nbsp;&nbsp; ✓ 24/7 Portal Access
-                </p>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Get Started Today</h2>
-                <p>Ready to experience professional property management with modern tools and personal service?</p>
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span>🏢</span>
-                        <a href="mailto:service@blueridgesquarellc.com">service@blueridgesquarellc.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <span>📧</span>
-                        <a href="mailto:info@blueridgesquarellc.com">info@blueridgesquarellc.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <span>🌐</span>
-                        <span>Professional Property Management Services</span>
-                    </div>
-                </div>
-                
-                <p class="contact-note">
-                    Primary communication and service requests handled through TurboTenant platform
-                </p>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="legal">
-                    <p>&copy; 2025 Blue Ridge Square LLC. All rights reserved.</p>
-                </div>
-                <div class="legal">
-                    <p>Licensed Property Management Services</p>
-                </div>
-            </div>
+        <div class="footer-content">
+            <div class="legal">© 2025 Blue Ridge Square LLC. All rights reserved.</div>
+            <div class="legal">Licensed Property Management Services</div>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+        // PROPERTY DATABASE
+        // TO ACTIVATE: Change "available: false" to "available: true" and add TurboTenant link
+        
+        const properties = [
+            // WAYNESBORO - East Main Street
+            {
+                id: "1705-east-main",
+                name: "1705 East Main Street",
+                city: "Waynesboro",
+                state: "VA",
+                zip: "22980",
+                rent: 935,
+                bedrooms: 2,
+                bathrooms: 1,
+                sqft: 528,
+                available: true,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
+            },
+            {
+                id: "1709-east-main",
+                name: "1709 East Main Street",
+                city: "Waynesboro",
+                state: "VA",
+                zip: "22980",
+                rent: 935,
+                bedrooms: 2,
+                bathrooms: 1,
+                sqft: 528,
+                available: false,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
+            },
+            {
+                id: "1713-east-main",
+                name: "1713 East Main Street",
+                city: "Waynesboro",
+                state: "VA",
+                zip: "22980",
+                rent: 900,
+                bedrooms: 2,
+                bathrooms: 1,
+                sqft: 528,
+                available: false,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
+            },
+            {
+                id: "1717-east-main",
+                name: "1717 East Main Street",
+                city: "Waynesboro",
+                state: "VA",
+                zip: "22980",
+                rent: 795,
+                bedrooms: 2,
+                bathrooms: 1,
+                sqft: 528,
+                available: false,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
+            },
+            {
+                id: "1721-east-main",
+                name: "1721 East Main Street",
+                city: "Waynesboro",
+                state: "VA",
+                zip: "22980",
+                rent: 950,
+                bedrooms: 2,
+                bathrooms: 1,
+                sqft: 528,
+                available: false,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
+            },
+            {
+                id: "1725-east-main",
+                name: "1725 East Main Street",
+                city: "Waynesboro",
+                state: "VA",
+                zip: "22980",
+                rent: 821,
+                bedrooms: 2,
+                bathrooms: 1,
+                sqft: 528,
+                available: false,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
+            },
+            {
+                id: "1729-east-main",
+                name: "1729 East Main Street",
+                city: "Waynesboro",
+                state: "VA",
+                zip: "22980",
+                rent: 735,
+                bedrooms: 2,
+                bathrooms: 1,
+                sqft: 528,
+                available: false,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
+            },
 
-        // Add subtle parallax effect to hero section
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            if (hero) {
-                hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+            // STANARDSVILLE - Main Street Triplex
+            {
+                id: "57-main-street",
+                name: "57 Main Street",
+                city: "Stanardsville",
+                state: "VA",
+                zip: "22973",
+                rent: 1125,
+                bedrooms: 1,
+                bathrooms: 1,
+                available: false,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
+            },
+            {
+                id: "59-main-street",
+                name: "59 Main Street",
+                city: "Stanardsville",
+                state: "VA",
+                zip: "22973",
+                rent: 1175,
+                bedrooms: 2,
+                bathrooms: 1,
+                available: false,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
+            },
+            {
+                id: "61-main-street",
+                name: "61 Main Street",
+                city: "Stanardsville",
+                state: "VA",
+                zip: "22973",
+                rent: 950,
+                bedrooms: 1,
+                bathrooms: 1,
+                available: false,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
+            },
+
+            // ELKTON - Smokey Lane
+            {
+                id: "115-smokey-lane",
+                name: "115 Smokey Lane",
+                city: "Elkton",
+                state: "VA",
+                zip: "22827",
+                rent: 394,
+                available: false,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
+            },
+            {
+                id: "123-smokey-lane",
+                name: "123 Smokey Lane",
+                city: "Elkton",
+                state: "VA",
+                zip: "22827",
+                rent: 394,
+                available: false,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
+            },
+            {
+                id: "129-smokey-lane",
+                name: "129 Smokey Lane",
+                city: "Elkton",
+                state: "VA",
+                zip: "22827",
+                rent: 624,
+                available: false,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
+            },
+            {
+                id: "153-smokey-lane",
+                name: "153 Smokey Lane",
+                city: "Elkton",
+                state: "VA",
+                zip: "22827",
+                rent: 386,
+                available: false,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
+            },
+            {
+                id: "161-smokey-lane",
+                name: "161 Smokey Lane (Pad Site)",
+                city: "Elkton",
+                state: "VA",
+                zip: "22827",
+                rent: 650,
+                available: true,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
+            },
+            {
+                id: "163-smokey-lane",
+                name: "163 Smokey Lane",
+                city: "Elkton",
+                state: "VA",
+                zip: "22827",
+                rent: 394,
+                available: false,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
+            },
+            {
+                id: "173-smokey-lane",
+                name: "173 Smokey Lane",
+                city: "Elkton",
+                state: "VA",
+                zip: "22827",
+                rent: 394,
+                available: false,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
+            },
+            {
+                id: "177-smokey-lane",
+                name: "177 Smokey Lane",
+                city: "Elkton",
+                state: "VA",
+                zip: "22827",
+                rent: 394,
+                available: false,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
+            },
+
+            // RUCKERSVILLE - Seminole Trail (Commercial)
+            {
+                id: "8390-seminole",
+                name: "8390 Seminole Trail - El Milagro",
+                city: "Ruckersville",
+                state: "VA",
+                zip: "22968",
+                rent: 2150,
+                sqft: 1800,
+                available: false,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
+            },
+            {
+                id: "8422-seminole",
+                name: "8422 Seminole Trail - Z Auto",
+                city: "Ruckersville",
+                state: "VA",
+                zip: "22968",
+                rent: 1749,
+                sqft: 1000,
+                available: false,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
+            },
+            {
+                id: "8426-seminole",
+                name: "8426 Seminole Trail - Z Auto",
+                city: "Ruckersville",
+                state: "VA",
+                zip: "22968",
+                rent: 1642,
+                sqft: 1290,
+                available: false,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
+            },
+
+            // RUCKERSVILLE - Sundance Court
+            {
+                id: "18-sundance",
+                name: "18 Sundance Court (Trailer 2)",
+                city: "Ruckersville",
+                state: "VA",
+                zip: "22968",
+                rent: 1085,
+                bedrooms: 2,
+                bathrooms: 1,
+                available: false,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
+            },
+            {
+                id: "24-sundance",
+                name: "24 Sundance Court (Trailer 4)",
+                city: "Ruckersville",
+                state: "VA",
+                zip: "22968",
+                rent: 1050,
+                bedrooms: 2,
+                bathrooms: 2,
+                available: false,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
+            },
+            {
+                id: "40-sundance",
+                name: "40 Sundance Court (Trailer 3)",
+                city: "Ruckersville",
+                state: "VA",
+                zip: "22968",
+                rent: 750,
+                available: false,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
+            },
+            {
+                id: "46-sundance",
+                name: "46 Sundance Court (Trailer 5)",
+                city: "Ruckersville",
+                state: "VA",
+                zip: "22968",
+                rent: 1155,
+                bedrooms: 2,
+                bathrooms: 1.5,
+                sqft: 900,
+                available: true,
+                turboPreScreenerUrl: "https://renter.turbotenant.com/applications/2128626"
+            },
+            {
+                id: "54-sundance",
+                name: "54 Sundance Court (Trailer 1)",
+                city: "Ruckersville",
+                state: "VA",
+                zip: "22968",
+                rent: 1485,
+                available: false,
+                turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
             }
-        });
+        ];
+
+        function loadProperties() {
+            const grid = document.getElementById('propertiesGrid');
+            const noPropsDiv = document.getElementById('noProperties');
+            const availableProperties = properties.filter(p => p.available);
+
+            if (availableProperties.length === 0) {
+                grid.style.display = 'none';
+                noPropsDiv.style.display = 'block';
+                return;
+            }
+
+            grid.innerHTML = availableProperties.map(property => {
+                const specs = [];
+                if (property.bedrooms) specs.push(`<span class="spec"><strong>${property.bedrooms}</strong> bed</span>`);
+                if (property.bathrooms) specs.push(`<span class="spec"><strong>${property.bathrooms}</strong> bath</span>`);
+                if (property.sqft) specs.push(`<span class="spec"><strong>${property.sqft}</strong> sqft</span>`);
+
+                return `
+                    <div class="property-card">
+                        <div class="property-image">🏠</div>
+                        <div class="property-info">
+                            <h3 class="property-name">${property.name}</h3>
+                            <p class="property-location">${property.city}, ${property.state} ${property.zip}</p>
+                            ${specs.length > 0 ? `<div class="property-specs">${specs.join('')}</div>` : ''}
+                            <div class="property-rent">$${property.rent.toLocaleString()}<span>/month</span></div>
+                            <a href="${property.turboPreScreenerUrl}" class="apply-btn" target="_blank">Apply Now</a>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', loadProperties);
     </script>
 </body>
 </html>
