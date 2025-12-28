@@ -17,87 +17,109 @@
             color: #2d3748;
         }
 
-        /* Header */
+        /* Header - Hidden */
         header {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1.25rem 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: #2d3748;
-        }
-
-        .logo span {
-            color: #667eea;
-        }
-
-        .portal-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 0.65rem 1.5rem;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
-        }
-
-        .portal-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+            display: none;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 5rem 1.5rem 4rem;
+            background: 
+                linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
+                url('blue ridge mountains.jpg') center/cover;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            padding: 2rem 1.5rem;
+            filter: grayscale(100%);
+        }
+        
+        .hero > * {
+            filter: grayscale(0%);
+        }
+
+        .hero-logo {
+            max-width: 500px;
+            width: 70%;
+            height: auto;
+            margin: 0 auto;
+            display: block;
         }
 
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
+            display: none;
         }
 
         .hero p {
-            font-size: 1.25rem;
-            opacity: 0.95;
+            display: none;
+        }
+
+        /* Explore Virginia Section */
+        .explore-virginia {
+            background: #f7fafc;
+            padding: 3rem 1.5rem;
+            border-top: 3px solid #1a3a52;
+            border-bottom: 3px solid #1a3a52;
+        }
+
+        .explore-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .explore-content h2 {
+            font-size: 1.75rem;
+            color: #1a3a52;
             margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            font-weight: 600;
+        }
+
+        .explore-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .explore-link {
+            background: white;
+            padding: 1.5rem 1rem;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #1a3a52;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .explore-link:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 20px rgba(26, 58, 82, 0.15);
+            background: #1a3a52;
+            color: white;
+        }
+
+        .explore-icon {
+            font-size: 2rem;
         }
 
         .trust-bar {
-            display: flex;
-            justify-content: center;
-            gap: 2.5rem;
-            margin-top: 2.5rem;
-            font-size: 0.95rem;
-            opacity: 0.9;
+            display: none;
         }
 
         .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            display: none;
         }
 
         /* Properties Section */
@@ -146,13 +168,20 @@
 
         .property-image {
             width: 100%;
-            height: 200px;
+            height: 250px;
             background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 3.5rem;
             color: #cbd5e0;
+            overflow: hidden;
+        }
+
+        .property-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .property-info {
@@ -190,7 +219,7 @@
         .property-rent {
             font-size: 1.75rem;
             font-weight: 700;
-            color: #667eea;
+            color: #1a3a52;
             margin-bottom: 1.25rem;
         }
 
@@ -204,7 +233,7 @@
             display: block;
             width: 100%;
             padding: 0.875rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #1a3a52;
             color: white;
             text-align: center;
             text-decoration: none;
@@ -216,7 +245,8 @@
 
         .apply-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.35);
+            box-shadow: 0 6px 20px rgba(26, 58, 82, 0.35);
+            background: #2d4f6b;
         }
 
         .no-properties {
@@ -263,7 +293,7 @@
 
         .benefit-icon {
             font-size: 1.75rem;
-            color: #667eea;
+            color: #1a3a52;
             flex-shrink: 0;
         }
 
@@ -346,8 +376,31 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            .hero {
+                padding: 2rem 1.5rem;
+            }
+
+            .hero-logo {
+                max-width: 350px;
+                width: 85%;
+            }
+
             .hero h1 {
-                font-size: 2.25rem;
+                font-size: 1.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .explore-links {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+
+            .explore-link {
+                padding: 1rem 0.75rem;
+                font-size: 0.9rem;
             }
 
             .trust-bar {
@@ -393,21 +446,63 @@
     -->
 
     <header>
-        <nav>
-            <div class="logo">Blue Ridge <span>Square</span></div>
-            <a href="https://renter.turbotenant.com/" class="portal-btn" target="_blank">Tenant Portal</a>
-        </nav>
     </header>
 
     <main>
         <!-- Hero Section -->
         <section class="hero">
-            <h1>Quality Rentals in Virginia</h1>
-            <p>Professional property management with simple, secure online applications</p>
+            <img src="BLUE RIDGE SQUARE LLC.png" alt="Blue Ridge Square LLC" class="hero-logo">
+            <h1>Quality Rentals in the Heart of Virginia</h1>
+            <p>Professional property management with simple, secure online applications through TurboTenant</p>
             <div class="trust-bar">
                 <div class="trust-item">📍 28 Properties Across Virginia</div>
                 <div class="trust-item">👨‍👩‍👧‍👦 Family-Owned & Operated</div>
                 <div class="trust-item">✓ Professional Screening</div>
+            </div>
+        </section>
+
+        <!-- Explore Virginia -->
+        <section class="explore-virginia">
+            <div class="explore-content">
+                <h2>Explore the Blue Ridge</h2>
+                <div class="explore-links">
+                    <a href="https://www.wintergreenresort.com/" target="_blank" class="explore-link">
+                        <span class="explore-icon">⛷️</span>
+                        <span>Wintergreen Resort</span>
+                    </a>
+                    <a href="https://www.massresort.com/" target="_blank" class="explore-link">
+                        <span class="explore-icon">🎿</span>
+                        <span>Massanutten Resort</span>
+                    </a>
+                    <a href="https://www.nps.gov/shen/index.htm" target="_blank" class="explore-link">
+                        <span class="explore-icon">🏔️</span>
+                        <span>Shenandoah National Park</span>
+                    </a>
+                    <a href="https://www.nps.gov/blri/index.htm" target="_blank" class="explore-link">
+                        <span class="explore-icon">🚗</span>
+                        <span>Blue Ridge Parkway</span>
+                    </a>
+                    <a href="https://www.visitcharlottesville.org/" target="_blank" class="explore-link">
+                        <span class="explore-icon">🏛️</span>
+                        <span>Charlottesville</span>
+                    </a>
+                    <a href="https://www.waynesboro.va.us/visitors" target="_blank" class="explore-link">
+                        <span class="explore-icon">🌄</span>
+                        <span>Waynesboro</span>
+                    </a>
+                    <a href="https://www.elktonbrewing.com/" target="_blank" class="explore-link">
+                        <span class="explore-icon">🍺</span>
+                        <span>Elkton Brewing Co.</span>
+                    </a>
+                    <a href="https://www.basiccitybeer.com/" target="_blank" class="explore-link">
+                        <span class="explore-icon">🍻</span>
+                        <span>Basic City Beer Co.</span>
+                    </a>
+                    <a href="https://www.thefoundrysound.com/" target="_blank" class="explore-link">
+                        <span class="explore-icon">🎵</span>
+                        <span>The Foundry</span>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -458,19 +553,6 @@
             </div>
         </section>
 
-        <!-- Contact -->
-        <section class="contact">
-            <h2>Questions?</h2>
-            <p>Get in touch with us about available properties</p>
-            <div class="contact-info">
-                <div class="contact-item">
-                    📧 <a href="mailto:service@blueridgesquarellc.com">service@blueridgesquarellc.com</a>
-                </div>
-                <div class="contact-item">
-                    📬 <a href="mailto:info@blueridgesquarellc.com">info@blueridgesquarellc.com</a>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer>
@@ -485,6 +567,21 @@
         // TO ACTIVATE: Change "available: false" to "available: true" and add TurboTenant link
         
         const properties = [
+            // ELKTON - Smokey Lane
+            {
+                id: "146-smokey-lane",
+                name: "146 Smokey Lane",
+                city: "Elkton",
+                state: "VA",
+                zip: "22827",
+                rent: 800,
+                bedrooms: 1,
+                bathrooms: 1,
+                available: true,
+                turboPreScreenerUrl: "https://rental.turbotenant.com/p/146-smokey-ln-elkton-va/2292906",
+                image: "146-smokey-lane.png"
+            },
+
             // WAYNESBORO - East Main Street
             {
                 id: "1705-east-main",
@@ -496,7 +593,7 @@
                 bedrooms: 2,
                 bathrooms: 1,
                 sqft: 528,
-                available: true,
+                available: false,
                 turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
             },
             {
@@ -664,7 +761,7 @@
                 state: "VA",
                 zip: "22827",
                 rent: 650,
-                available: true,
+                available: false,
                 turboPreScreenerUrl: "REPLACE_WITH_TURBOTENANT_LINK"
             },
             {
@@ -778,7 +875,7 @@
                 bedrooms: 2,
                 bathrooms: 1.5,
                 sqft: 900,
-                available: true,
+                available: false,
                 turboPreScreenerUrl: "REPLACE_WITH_PRESCREENER_LINK"
             },
             {
@@ -810,9 +907,13 @@
                 if (property.bathrooms) specs.push(`<span class="spec"><strong>${property.bathrooms}</strong> bath</span>`);
                 if (property.sqft) specs.push(`<span class="spec"><strong>${property.sqft}</strong> sqft</span>`);
 
+                const imageHtml = property.image 
+                    ? `<img src="${property.image}" alt="${property.name}">`
+                    : '🏠';
+
                 return `
                     <div class="property-card">
-                        <div class="property-image">🏠</div>
+                        <div class="property-image">${imageHtml}</div>
                         <div class="property-info">
                             <h3 class="property-name">${property.name}</h3>
                             <p class="property-location">${property.city}, ${property.state} ${property.zip}</p>
